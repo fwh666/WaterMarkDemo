@@ -1,3 +1,27 @@
+# 思路：
+1. 功能页面：点击上传图片
+2. 输入水印文字，或者水印的图片
+3. 输出已添加水印的图文
+
+## 拆分：
+1. 如何上传图片且保留原始图片信息
+2. 如何获取输入的文字信息
+3. 如何将信息加工输出带有水印的信息
+4. 如何将信息回显到页面
+5. 结果支持原数据的下载
+
+
+# Evemement:
+```shell
+// npm
+npm install @pansy/watermark --save
+npm install @pansy/react-watermark --save
+npm install antd --save
+
+// yarn
+yarn add @pansy/watermark
+```
+
 # Doc:
 - https://create-react-app.dev/docs/adding-typescript/
 ### Install:

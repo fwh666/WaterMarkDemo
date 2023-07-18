@@ -1,0 +1,71 @@
+// import React, { useState, useEffect } from "react";
+// import { useRef } from "react";
+// import Image from "react-image";
+// import { FileInput } from "react-input-file";
+
+// const Watermark = () => {
+//     const [image, setImage] = useState(null);
+//     const [watermark, setWatermark] = useState("");
+//     const [watermarkedImage, setWatermarkedImage] = useState(null);
+
+//     const imageRef = useRef(null);
+
+//     useEffect(() => {
+//         if (image) {
+//             imageRef.current.src = image;
+//         }
+//     }, [image]);
+
+//     const watermarkImage = () => {
+//         const canvas = document.createElement("canvas");
+//         const width = image.width;
+//         const height = image.height;
+//         canvas.width = width;
+//         canvas.height = height;
+//         const ctx = canvas.getContext("2d");
+//         ctx.drawImage(imageRef.current, 0, 0);
+//         ctx.font = "20px Arial";
+//         ctx.fillStyle = "red";
+//         ctx.fillText(watermark, 10, 20);
+//         return canvas.toDataURL();
+//     };
+
+//     const onImageChange = (e) => {
+//         setImage(e.target.files[0]);
+//     };
+
+//     const onWatermarkChange = (e) => {
+//         setWatermark(e.target.value);
+//     };
+
+//     const onWatermarkImage = () => {
+//         setWatermarkedImage(watermarkImage());
+//     };
+
+//     return (
+//         <div>
+//             <h1>Watermark</h1>
+//             <div>
+//                 <Image src={image} alt="Image" />
+//             </div>
+//             <div>
+//                 <FileInput onChange={onImageChange} />
+//             </div>
+//             <div>
+//                 <input
+//                     type="text"
+//                     value={watermark}
+//                     onChange={onWatermarkChange}
+//                 />
+//             </div>
+//             <div>
+//                 <img src={watermarkedImage} alt="Watermarked Image" />
+//             </div>
+//             <div>
+//                 <button onClick={onWatermarkImage}>Watermark Image</button>
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default Watermark;
